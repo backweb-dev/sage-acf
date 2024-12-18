@@ -1,0 +1,43 @@
+{
+  "name": "backweb/sage-acf",
+  "keywords": [
+    "sage",
+    "wordpress",
+    "acorn",
+    "theme-development",
+    "blade"
+  ],
+  "type": "library",
+  "require": {
+    "php": ">=8.0",
+    "roots/acorn": "^4.3"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Backweb\\SageAcf\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Backweb",
+      "email": "contact@backweb.dev"
+    }
+  ],
+  "extra": {
+    "acorn": {
+      "providers": [
+        "Backweb\\SageAcf\\Providers\\SageAcfServiceProvider"
+      ],
+      "view": {
+        "namespaces": {
+          "Acf": "resources/views"
+        }
+      },
+      "components": {
+        "namespace": "Backweb\\SageAcf\\View\\Components\\",
+        "directory": "app/View/Components"
+      }
+    }
+  }
+}
